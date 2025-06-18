@@ -75,19 +75,19 @@ We follow a **layered** structure mirroring clean-architecture principles:
    cd rocket-telemetry-dashboard
 
 2. **Dependencies**
-- customtkinter
-- pyserial
-- tkintermapview
-- cupy
-- psutil
-- GPUtil
-- matplotlib
-- numpy
-- numpy-stl
-- memory-profiler
-- bcrypt
-- pywinstyles
-- Pillow
+    - customtkinter
+    - pyserial
+    - tkintermapview
+    - cupy
+    - psutil
+    - GPUtil
+    - matplotlib
+    - numpy
+    - numpy-stl
+    - memory-profiler
+    - bcrypt
+    - pywinstyles
+    - Pillow
 
 * You can install them all at once using the command below:
   ```bash
