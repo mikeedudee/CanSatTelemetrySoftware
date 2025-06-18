@@ -107,11 +107,11 @@ Ensure you’re using a compatible Python 3.x interpreter.
 ---
 
 ## Usage:
-Before running the file make sure to install all the pre-requisites and make sure to have a compatible CUDA version install on your system otherwise it will not work.
+**Before running the file make sure to install all the pre-requisites and make sure to have a compatible CUDA version installed on your system; otherwise, it will not work.**
 
-* To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_offlinemap.py" if you wish to see it working and integrated to your system. Follow the following format, or modify the reading formatting directly to suit your needs. *
 
-- **`The Format`**
+To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_offlinemap.py" if you wish to see it working and integrated into your system. Your CanSat must provide the following format, or modify the reading formatting directly to suit your needs.
+- **The Format**
   - `Pressure` ― Pressure reading from MS5611 or any sensor capable of providing such.
   - `Relative_Altitude` — Derived from the pressure data or simply from any data gathered from a sensor.
   - `Main Sensor Temperature` — From your main sensor reading of temperature.
@@ -128,3 +128,7 @@ Before running the file make sure to install all the pre-requisites and make sur
   - `Absolute Altitude` — The fixed altitude from sea level.
 
 ---
+
+**To make the GPS work offline, make sure you downloaded the maps of your place or the location of the launch site and run a python command line at that map JSON folder:**
+  ```bash
+  python -m http.server 8000
