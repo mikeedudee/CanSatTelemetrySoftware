@@ -41,45 +41,45 @@ pr.enable()
 startup_start = time.perf_counter()
 
 #Global defaults
-Pressure             = 0.0
-Relative_Altitude    = 0.0
-MS5611_Temperature   = 0.0
-Thermistor           = 0.0
-Latitude             = 0.0
-Longitude            = 0.0
-Latitude_Pred        = 0.0
-Longitude_Pred       = 0.0
-SD_Card_Status       = 0.0
-Time_Elapsed         = 0.0
-BNO08x_Status        = 0.0
-Yaw                  = 0.0
-Pitch                = 0.0
-Roll                 = 0.0
-Velocity             = 0.0
-Absolute_Altitude    = 0.0
-Time_Elapsed_minute  = 0.0
-latency              = 0.0
-last_data_timestamp  = 0.0
-cpu_usage            = 0.0
-mem_usage            = 0.0
-gpu_usage            = 0.0
-computed_horiz_speed = 0.0
-prev_lat             = None
-prev_lon             = None
-prev_time            = None
-latest_data          = None
-running              = False
-current_port         = None
-ser                  = None
-dashboard_instance   = None
-BAUD_RATE            = 9600 #Defaut BAUD RATE
-COM_PORT             = "COM24" #Defaut COM PORT
-data_buffer          = deque(maxlen=5)
+Pressure                 = 0.0
+Relative_Altitude        = 0.0
+MS5611_Temperature       = 0.0
+Thermistor               = 0.0
+Latitude                 = 0.0
+Longitude                = 0.0
+Latitude_Pred            = 0.0
+Longitude_Pred           = 0.0
+SD_Card_Status           = 0.0
+Time_Elapsed             = 0.0
+BNO08x_Status            = 0.0
+Yaw                      = 0.0
+Pitch                    = 0.0
+Roll                     = 0.0
+Velocity                 = 0.0
+Absolute_Altitude        = 0.0
+Time_Elapsed_minute      = 0.0
+latency                  = 0.0
+last_data_timestamp      = 0.0
+cpu_usage                = 0.0
+mem_usage                = 0.0
+gpu_usage                = 0.0
+computed_horiz_speed     = 0.0
+prev_lat                 = None
+prev_lon                 = None
+prev_time                = None
+latest_data              = None
+running                  = False
+current_port             = None
+ser                      = None
+dashboard_instance       = None
+BAUD_RATE                = 9600 #Defaut BAUD RATE
+COM_PORT                 = "COM24" #Defaut COM PORT
+data_buffer              = deque(maxlen=5)
 
 # PATH OF THE FILE TO ITSELF SO IT IS DYNAMIC
-ASSETS_PATH_IMG = Path(__file__).resolve().parent / "assets"
-ASSETS_PATH_3D  = Path(__file__).resolve().parent / "assets/3dMeshes"
-stl_mesh    = mesh.Mesh.from_file(ASSETS_PATH_3D / 'cylinder.stl')
+ASSETS_PATH_IMG     = Path(__file__).resolve().parent / "assets"
+ASSETS_PATH_3D      = Path(__file__).resolve().parent / "assets/3dMeshes"
+stl_mesh            = mesh.Mesh.from_file(ASSETS_PATH_3D / 'cylinder.stl')
 
 # Constants
 EarthRadius   = (((2 * 6378.1370) + 6356.7523) / 3) * 1000
@@ -158,20 +158,20 @@ def serial_thread():
             global Latitude, Longitude, SD_Card_Status, Time_Elapsed
             global BNO08x_Status, Yaw, Pitch, Roll, Velocity, Absolute_Altitude
 
-            Pressure           = data["Pressure"]
-            Relative_Altitude  = data["Relative_Altitude"]
-            MS5611_Temperature = data["MS5611_Temperature"]
-            Thermistor         = data["Thermistor"]
-            Latitude           = data["Latitude"]
-            Longitude          = data["Longitude"]
-            SD_Card_Status     = data["SD_Card_Status"]
-            Time_Elapsed       = data["Time_Elapsed"]
-            BNO08x_Status      = data["BNO08x_Status"]
-            Yaw                = data["Yaw"]
-            Pitch              = data["Pitch"]
-            Roll               = data["Roll"]
-            Velocity           = data["Velocity"]
-            Absolute_Altitude  = data["Absolute_Altitude"]
+            Pressure               = data["Pressure"]
+            Relative_Altitude      = data["Relative_Altitude"]
+            MS5611_Temperature     = data["MS5611_Temperature"]
+            Thermistor             = data["Thermistor"]
+            Latitude               = data["Latitude"]
+            Longitude              = data["Longitude"]
+            SD_Card_Status         = data["SD_Card_Status"]
+            Time_Elapsed           = data["Time_Elapsed"]
+            BNO08x_Status          = data["BNO08x_Status"]
+            Yaw                    = data["Yaw"]
+            Pitch                  = data["Pitch"]
+            Roll                   = data["Roll"]
+            Velocity               = data["Velocity"]
+            Absolute_Altitude      = data["Absolute_Altitude"]
             
             print(f"{Pressure}, {Relative_Altitude}, {MS5611_Temperature}, {Thermistor}, {Latitude}, {Longitude}, {SD_Card_Status}, {Time_Elapsed}, {BNO08x_Status}, {Yaw}, {Pitch}, {Roll}, {Velocity}, {Absolute_Altitude}, {current_port}, {BAUD_RATE}")
 
@@ -181,6 +181,7 @@ def serial_thread():
                 if dt > 0:
                     dist = haversine_distance(prev_lat, prev_lon, Latitude, Longitude)
                     computed_horiz_speed = dist / dt
+                    
             prev_lat  = Latitude
             prev_lon  = Longitude
             prev_time = current_time
@@ -1523,9 +1524,9 @@ if __name__ == "__main__":
     
 '''    
 pr.disable()
-s = io.StringIO()
+s      = io.StringIO()
 sortby = 'cumulative'
-ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+ps     = pstats.Stats(pr, stream=s).sort_stats(sortby)
 ps.print_stats()
 print(s.getvalue())
 '''
