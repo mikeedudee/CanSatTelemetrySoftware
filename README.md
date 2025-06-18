@@ -18,4 +18,5 @@ Real-time data acquisition and visualization system designed specifically for ou
 - Pillow
 
 You can install them all at once using the command below:
+
 pip install customtkinter pyserial tkintermapview cupy psutil GPUtil matplotlib numpy numpy-stl memory-profiler bcrypt pywinstyles Pillow
