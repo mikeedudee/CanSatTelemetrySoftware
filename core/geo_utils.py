@@ -3,7 +3,6 @@
 """
 Module: geo_utils
 Provides geodetic utility functions.
-Adheres to “Power of Ten” guidelines: small, well-documented, and defensively coded.
 """
 
 import math
