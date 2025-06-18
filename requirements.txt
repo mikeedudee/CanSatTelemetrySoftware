@@ -1,0 +1,13 @@
+customtkinter
+pyserial
+tkintermapview
+cupy
+psutil
+GPUtil
+matplotlib
+numpy
+numpy-stl
+memory-profiler
+bcrypt
+pywinstyles
+Pillow
