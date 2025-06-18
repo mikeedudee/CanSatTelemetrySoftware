@@ -71,8 +71,8 @@ We follow a **layered** structure mirroring clean-architecture principles:
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/yourusername/rocket-telemetry-dashboard.git
-   cd rocket-telemetry-dashboard
+   git clone https://github.com/mikeedudee/CanSatTelemetrySoftware.git
+   cd CanSatTelemetrySoftware
 
 2. **Dependencies**
     - customtkinter
