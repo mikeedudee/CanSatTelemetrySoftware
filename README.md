@@ -109,7 +109,7 @@ Ensure you’re using a compatible Python 3.x interpreter.
 ## Usage:
 Before running the file make sure to install all the pre-requisites and make sure to have a compatible CUDA version install on your system otherwise it will not work.
 
-* To run you can skip the login.py and directly to the "newui7_stable_rebuild_offlinemap.py". If you wish to see it working and integrated to your system. Follow the following format, or modify its reading formatting. *
+* To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_offlinemap.py" if you wish to see it working and integrated to your system. Follow the following format, or modify the reading formatting directly to suit your needs. *
 
 - **`The Format`**
   - `Pressure` ― Pressure reading from MS5611 or any sensor capable of providing such.
