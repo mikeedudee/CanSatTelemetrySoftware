@@ -35,7 +35,7 @@ Real-time data acquisition and visualization system designed specifically for ou
 - **Responsive GUI**  
   - CustomTkinter theme & layout  
   - Configurable widgets, buttons, status indicators
-  - Real-time trajectory/flight-path projection
+  - Real-time 3-dimensional trajectory/flight-path projection
 - **User authentication**  
   - Simple login screen with `bcrypt`-encrypted credentials  
 - **Performance monitoring**  
