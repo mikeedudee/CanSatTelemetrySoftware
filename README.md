@@ -34,7 +34,8 @@ Real-time data acquisition and visualization system designed specifically for ou
   - Plot current GPS track & waypoints  
 - **Responsive GUI**  
   - CustomTkinter theme & layout  
-  - Configurable widgets, buttons, status indicators  
+  - Configurable widgets, buttons, status indicators
+  - Real-time trajectory/flight-path projection
 - **User authentication**  
   - Simple login screen with `bcrypt`-encrypted credentials  
 - **Performance monitoring**  
