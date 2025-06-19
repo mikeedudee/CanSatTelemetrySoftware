@@ -134,7 +134,7 @@ To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_
   - `Yaw` — Yaw reading for your Inertial Measurement Unit (IMU).
   - `Pitch` — Pitch reading for your Inertial Measurement Unit (IMU).
   - `Roll` — Roll reading for your Inertial Measurement Unit (IMU).
-  - `Velocity` — Horizontal velocity reading (derived or accesed) from the sensor
+  - `Velocity` — Vertical velocity reading (derived or accessed) from the sensor
   - `Absolute Altitude` — The fixed altitude from sea level.
 
 ---
