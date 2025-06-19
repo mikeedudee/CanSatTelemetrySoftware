@@ -72,6 +72,8 @@ We follow a **layered** structure mirroring clean-architecture principles:
 - **Hardware:**  
   - USB-serial adapter or onboard COM port  
   - GPU with CUDA support
+    > Tested in an environment of CUDA Build: cuda_12.9.r12.9/compiler.35813241_0 (V12.9.41).
+    > Incompatibility may occur at your instance.
 
 ---
 
