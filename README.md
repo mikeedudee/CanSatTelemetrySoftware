@@ -1,3 +1,10 @@
+## ⚠️ Disclaimer 
+> This repository contains a **preview version** of the Telemetry Software for our experimental rocket "Hanggang Sa Dulo".  
+> Please note that this source code is **not finalized** and remains **under active development**.  
+> **Unresolved bugs, incomplete features, and performance issues may occur.**
+> 
+> Use with caution and make sure to install all the dependencies, especially the required **CUDA version** for your system, so that it will run accordingly, as it may affect your hardware.
+
 # CanSatTelemetrySoftware
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()
