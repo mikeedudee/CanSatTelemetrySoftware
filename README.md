@@ -181,3 +181,9 @@ To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_
   cd offline_tiles
   python -m http.server 8000
   ```
+
+**This is the listener that allows it to do that (for your reference):**
+  ```python
+  tile_server="http://localhost:8000/{z}/{x}/{y}.png"
+  ```
+
