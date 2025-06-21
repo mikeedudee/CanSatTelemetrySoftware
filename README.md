@@ -7,7 +7,7 @@
 
 # CanSatTelemetrySoftware
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)]()
+[![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 
 Real-time data visualization system designed specifically for our CanSat mission. Communicates between the onboard microcontroller and the ground station via our radio communication module.
@@ -68,11 +68,15 @@ We follow a **layered** structure mirroring clean-architecture principles:
 ## Prerequisites
 
 - **OS:** Windows 10/11, macOS, or Linux  
-- **Python:** ≥ 3.8 (3.9+)  
+- **Python:** ≥ 3.11 (3.11+)
+    > Tested in an environment of Python: v3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32.
+    >
+    > Incompatibility may occur at your instance.
 - **Hardware:**  
   - USB-serial adapter or onboard COM port  
   - GPU with CUDA support
-    > Tested in an environment of CUDA Build: cuda_12.9.r12.9/compiler.35813241_0 (V12.9.41)
+    > Tested in an environment of CUDA Build: cuda_12.9.r12.9/compiler.35813241_0 (V12.9.41).
+    > 
     > Incompatibility may occur at your instance.
 
 ---
