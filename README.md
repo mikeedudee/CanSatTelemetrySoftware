@@ -148,42 +148,46 @@ To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_
 
 ---
 
-## How to download offline maps
+## Download offline maps
 - Download Mobile Atlas Creator
 
-1. Select a Map Source:
-    - Open MOBAC and choose the desired map source from the list (for example, OpenStreetMap, OpenCycleMap, etc.).
-2. Define the Area:
-    - Use the map view to navigate to the region you want to download tiles for. You can either draw a bounding box or select a predefined region.
+    1. Select a Map Source:
+        - Open MOBAC and choose the desired map source from the list (for example, OpenStreetMap, OpenCycleMap, etc.).
+    2. Define the Area:
+        - Use the map view to navigate to the region you want to download tiles for. You can either draw a bounding box or select a predefined region.
+    
+    3. Choose Zoom Levels:
+        - In the interface, select the zoom levels you need. The more zoom levels you select, the larger (and more detailed) the downloaded atlas will be.
+    
+    4. Select an Atlas Format:
+        - Under the “Atlas Format” options, choose the format that suits your needs. For offline tile serving, you can select a “Tile Directory” (which saves tiles in a folder structure like {z}/{x}/{y}.png) or an MBTiles format if your offline viewer supports it.
+    
+    5. Create the Atlas:
+        - Click the “Create Atlas” button. MOBAC will download the tiles for the specified region and zoom levels and save them in your chosen format.
+    
+    6. Serve the Tiles Locally:
+        - If you select a tile directory, you can then run a local HTTP server (e.g., using Python’s http.server module) in that folder so your application can use them offline.
+    
+    7. Export your atlas as an MBTiles file and then convert it into a folder structure. You can use a tool like mbutil to extract the tiles. For example, after exporting your MBTiles file (e.g., myatlas.mbtiles), install mbutil via pip:
 
-3. Choose Zoom Levels:
-    - In the interface, select the zoom levels you need. The more zoom levels you select, the larger (and more detailed) the downloaded atlas will be.
+    ```bash
+    pip install mbutil
+    ```
 
-4. Select an Atlas Format:
-    - Under the “Atlas Format” options, choose the format that suits your needs. For offline tile serving, you can select a “Tile Directory” (which saves tiles in a folder structure like {z}/{x}/{y}.png) or an MBTiles format if your offline viewer supports it.
+    ```bash
+    mb-util myatlas.mbtiles offline_tiles
+    ```
 
-5. Create the Atlas:
-    - Click the “Create Atlas” button. MOBAC will download the tiles for the specified region and zoom levels and save them in your chosen format.
+    - This command will create a directory structure with folders for each zoom level and the tiles organized as {z}/{x}/{y}.png.
+    - We can now point the software's map server to this local directory served via a local HTTP server (using, for example, Python's built-in server):
 
-6. Serve the Tiles Locally:
-    - If you select a tile directory, you can then run a local HTTP server (e.g., using Python’s http.server module) in that folder so your application can use them offline.
-
-7. Export your atlas as an MBTiles file and then convert it into a folder structure. You can use a tool like mbutil to extract the tiles. For example, after exporting your MBTiles file (e.g., myatlas.mbtiles), install mbutil via pip
-  ```bash
-  pip install mbutil
-  ```
-  ```bash
-  mb-util myatlas.mbtiles offline_tiles
-  ```
-  - This command will create a directory structure with folders for each zoom level and the tiles organized as {z}/{x}/{y}.png.
-  - We can now point the software's map server to this local directory served via a local HTTP server (using, for example, Python's built-in server):
-  ```bash
-  cd offline_tiles
-  python -m http.server 8000
-  ```
-
-**This is the listener that allows it to do that (for your reference):**
-  ```python
-  tile_server="http://localhost:8000/{z}/{x}/{y}.png"
-  ```
+   ```bash
+    cd offline_tiles
+    python -m http.server 8000
+    ```
+    
+    **This is the listener that allows it to do that (for your reference):**
+      ```
+      tile_server="http://localhost:8000/{z}/{x}/{y}.png"
+      ```
 
