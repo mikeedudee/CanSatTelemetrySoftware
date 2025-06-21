@@ -102,10 +102,12 @@ We follow a **layered** structure mirroring clean-architecture principles:
 * You can install them all at once using the command below:
   ```bash
   pip install customtkinter pyserial tkintermapview cupy psutil GPUtil matplotlib numpy numpy-stl memory-profiler bcrypt pywinstyles Pillow
+  ```
 
 * Or Install them with:
   ```bash
   pip install -r requirements.txt
+  ```
 
 ---
 
@@ -142,3 +144,26 @@ To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_
 **To make the GPS work offline, make sure you downloaded the maps of your place or the location of the launch site and run a python command line at that map JSON folder:**
   ```bash
   python -m http.server 8000
+  ```
+
+---
+
+## How to download offline maps
+- Download Mobile Atlas Creator
+
+1. Select a Map Source:
+    - Open MOBAC and choose the desired map source from the list (for example, OpenStreetMap, OpenCycleMap, etc.).
+2. Define the Area:
+    - Use the map view to navigate to the region you want to download tiles for. You can either draw a bounding box or select a predefined region.
+
+3. Choose Zoom Levels:
+    - In the interface, select the zoom levels you need. The more zoom levels you select, the larger (and more detailed) the downloaded atlas will be.
+
+4. Select an Atlas Format:
+    - Under the “Atlas Format” options, choose the format that suits your needs. For offline tile serving, you can select a “Tile Directory” (which saves tiles in a folder structure like {z}/{x}/{y}.png) or an MBTiles format if your offline viewer supports it.
+
+5. Create the Atlas:
+    - Click the “Create Atlas” button. MOBAC will download the tiles for the specified region and zoom levels and save them in your chosen format.
+
+6. Serve the Tiles Locally:
+    - If you select a tile directory, you can then run a local HTTP server (e.g., using Python’s http.server module) in that folder so your application can use them offline.
