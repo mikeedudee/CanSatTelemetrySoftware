@@ -14,6 +14,16 @@ Real-time data visualization system designed specifically for our CanSat mission
 
 ---
 
+## PREVIEW
+**Login Page**
+![Screenshot 2025-04-07 164517](https://github.com/user-attachments/assets/36b1ec0c-8908-445b-9a82-912e76eb2006)
+
+**Dashboard**
+![Screenshot 2025-04-07 163457](https://github.com/user-attachments/assets/c4c8b884-4f29-44b9-b9bf-835d1b1333d3)
+
+
+---
+
 ## Table of Contents
 
 1. [Features](#features)
