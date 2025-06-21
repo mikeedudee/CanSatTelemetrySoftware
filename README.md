@@ -8,7 +8,7 @@
 # CanSatTelemetrySoftware
 
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
+[![License](https://img.shields.io/badge/license-Mozilla_Public_License_v2.0-green.svg)]()
 
 Real-time data visualization system designed specifically for our CanSat mission. Communicates between the onboard microcontroller and the ground station via our radio communication module.
 
