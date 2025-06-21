@@ -167,3 +167,17 @@ To run, you can skip the login.py and go directly to the "newui7_stable_rebuild_
 
 6. Serve the Tiles Locally:
     - If you select a tile directory, you can then run a local HTTP server (e.g., using Python’s http.server module) in that folder so your application can use them offline.
+
+7. Export your atlas as an MBTiles file and then convert it into a folder structure. You can use a tool like mbutil to extract the tiles. For example, after exporting your MBTiles file (e.g., myatlas.mbtiles), install mbutil via pip
+  ```bash
+  pip install mbutil
+  ```
+  ```bash
+  mb-util myatlas.mbtiles offline_tiles
+  ```
+  - This command will create a directory structure with folders for each zoom level and the tiles organized as {z}/{x}/{y}.png.
+  - We can now point the software's map server to this local directory served via a local HTTP server (using, for example, Python's built-in server):
+  ```bash
+  cd offline_tiles
+  python -m http.server 8000
+  ```
