@@ -117,7 +117,7 @@ We follow a **layered** structure mirroring clean-architecture principles:
 
 ## Note:
 Ensure you’re using a compatible Python 3.x interpreter.
-- For GPU acceleration, cupy must match your CUDA toolkit version. Please do be aware that Cupy might not support the latest version of Python; you might need to use the same environment as our tested environment.
+- For GPU acceleration, cupy must match your CUDA toolkit version. Please do be aware that some cupy builds might not support the latest versions of Python; you might need to use an environment that supports your cupy build.
 - tkinter comes with the standard library, but on some Linux distributions, you may need to install python3-tk.
 
 ---
